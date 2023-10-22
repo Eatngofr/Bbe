@@ -1,6 +1,7 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const openai = require('openai')
+const config = require('./config')
 
 dotenv.config()
 
@@ -12,7 +13,7 @@ app.post('/chat', async (req, res) => {
   const response = await openai.completions.create({
     engine: 'davinci-codex',
     prompt: message,
-    max_tokens: 100,
+    max_tokens: config.maxTokens,
   })
 
   res.send(response.choices[0].text)
