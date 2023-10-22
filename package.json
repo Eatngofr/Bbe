@@ -1,0 +1,14 @@
+{
+  "name": "chat-gpt",
+  "version": "1.0.0",
+  "description": "Un chat bot utilisant ChatGPT",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "dotenv": "^10.0.0",
+    "openai": "^1.0.0"
+  }
+}
